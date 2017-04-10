@@ -18,7 +18,7 @@ $output .= "<table style='width:25%'>".PHP_EOL;
 $output .= "<tr><td> <b>Intensity</b> </td> <td> <b>Ideal Rate</b> </td></tr>" . PHP_EOL;
 foreach ($result as $row){
     $output.= "<tr>".PHP_EOL;
-    $output.= "<td>" . $row['intensity'] . "</td>".PHP_EOL."<td>" . $row['idealRate'] . "</td>" . PHP_EOL;
+    $output.= "<td>" . $row['intensity'] . "%</td>".PHP_EOL."<td>" . $row['idealRate'] . " BPM</td>" . PHP_EOL;
     $output .= "</tr>".PHP_EOL;
 }
 

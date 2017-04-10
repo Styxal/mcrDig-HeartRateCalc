@@ -9,15 +9,15 @@ class heartRateCalculator
      */
     public function getRates($heartRate, $age){
         $percentages = array(
-            0.55,
-            0.60,
-            0.65,
-            0.70,
-            0.75,
-            0.80,
-            0.85,
-            0.90,
-            0.95
+            55,
+            60,
+            65,
+            70,
+            75,
+            80,
+            85,
+            90,
+            95
         );
         $output = array();
 
@@ -43,8 +43,9 @@ class heartRateCalculator
         if ($age+$heartRate == 220){
             $target = 'error';
         } else {
+            $intensity /= 100;
             $target = 220;
-            $target = (($target - $age - $heartRate) * $intensity) + $heartRate;
+            $target = (int)(($target - $age - $heartRate) * $intensity) + $heartRate;
         }
 
         return $target;
